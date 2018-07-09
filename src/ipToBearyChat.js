@@ -1,7 +1,7 @@
 var httpGetUrl = require('./httpGet');
 var bearyChatRequest = require('./bearyChatRequest');
 
-async function ip138() {
+async function ip() {
     // var url = "http://2018.ip138.com/ic.asp";
     var url = "http://pv.sohu.com/cityjson?ie=utf-8"
     var ipinfo = await httpGetUrl.httpGet(url);
@@ -13,4 +13,4 @@ async function ip138() {
     console.log("当前IP地址为：" + ip);
     bearyChatRequest.bearyChatRequest("当前IP地址为：" + ip);
 }
-ip138();
+ip();
