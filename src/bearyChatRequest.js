@@ -28,10 +28,15 @@ var bearyChatRequest = function (title1, title2, text1, color) {
 
     let path;
     let site;
-    switch (arg.arg()) {
-        default:
-            path = "/=bwDaT/incoming/15df6e4b01477e9ef0570a6c47b97f2b";
-            break;
+
+    if (arg.arg(2).substring(0, 1) == '/' && arg.arg(2).length > 40) {
+        path = arg.arg(2);
+    } else if (arg.arg(3).substring(0, 1) == '/' && arg.arg(3).length > 40) {
+        path = arg.arg(3);
+    } else if (arg.arg(4).substring(0, 1) == '/' && arg.arg(4).length > 40) {
+        path = arg.arg(4);
+    } else {
+        path = "/=bwDaT/incoming/15df6e4b01477e9ef0570a6c47b97f2b";
     }
 
     // console.log(arg.arg())
